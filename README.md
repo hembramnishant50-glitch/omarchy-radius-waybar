@@ -1,39 +1,34 @@
-# omarchy-radius-waybar
-The Omarchy Radius is a minimalist, modular Waybar theme
+Omarchy Radius Waybar
+A minimalist, modular Waybar theme designed for clarity and aesthetics.
 
-<img width="1920" height="76" alt="Image" src="https://github.com/user-attachments/assets/e505d542-1859-4458-abd9-5cd61c622a88" />
+🌦️ Weather Module Configuration
+The custom/weather module uses a simple curl fetch from wttr.in. Use the template below in your config.jsonc:
 
-
-Note :- 
-custom/weather
+JSON
 
 "custom/weather": {
     "format": "󰖐 {}°C",
-    "interval": 3600, // Updates every hour (3600 seconds)
+    "interval": 3600,
     "exec": "curl -s 'wttr.in/CITY_NAME?format=%t' | grep -oE '[0-9]+'",
     "on-click": "xdg-open 'https://www.google.com/search?q=weather+CITY_NAME'"
-} 
+}
+🛠️ How to Customize Your Location
+1. Update the Fetch Command (exec)
+This line retrieves the temperature.
 
+Find: wttr.in/CITY_NAME
 
-Step-by-Step Guide to Changing Location
-1. The exec Line (The Display)
-This is what fetches the temperature you see on your bar.
+Change: Replace CITY_NAME with your city.
 
-Find: wttr.in/New+York
+Note: If your city name has a space (e.g., San Francisco), use a + instead: San+Francisco.
 
-Change: Replace New+York with any city name.
+2. The Filter (grep)
+The pipe command | grep -oE '[0-9]+' acts as a filter. It strips symbols like + or °C from the raw data, leaving only the digits. This ensures the Waybar format string handles the styling consistently.
 
-Rule: If the city name has a space (like San Francisco), use a + sign instead of a space: San+Francisco.
+3. Interaction (on-click)
+Update the URL at the end of the on-click line to ensure clicking the module opens the correct local forecast in your browser:
 
+Example: ?q=weather+london
 
-2. The grep Command (The Cleanup)
-The | grep -oE '[0-9]+' part is a filter.
-
-Why it's there: By default, wttr.in might return +22°C. This command strips away the + and the °C so that only the number (22) is passed to Waybar. This allows your format string to handle the styling.
-
-3. The on-click Line (The Interaction)
-This determines what happens when you click the weather icon.
-
-Change: Update the query at the end of the URL: ?q=weather+city+name.
-
-This ensures that when you click, your browser opens the full forecast for the correct city.
+🎨 Styling Note
+If you are using the Omarchy Radius color palette, remember to check your style.css for consistent padding and border-radius to match the modular "island" look.
