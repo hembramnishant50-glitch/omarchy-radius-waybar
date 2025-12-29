@@ -37,33 +37,14 @@ Update your `config.jsonc` with the following block:
    ```
 
 ## 🚀 Installation
-🚀 Quick Installation
-Run this single command to backup your old config and install Omarchy Radius:
-```json
-mv ~/.config/waybar ~/.config/waybarback 2>/dev/null; git clone [https://github.com/hembramnishant50-glitch/omarchy-radius-waybar.git](https://github.com/hembramnishant50-glitch/omarchy-radius-waybar.git) ~/.config/waybar && killall waybar; waybar &
-   ```
 
-
-# Clone the repository
-```json
-git clone https://github.com/hembramnishant50-glitch/omarchy-radius-waybar.git
-
-   ```
-
-# Create the directory and copy files
-
-```json
-mkdir -p ~/.config/waybar
-cp -r omarchy-radius-waybar/* ~/.config/waybar/
-   ```
-
-3. Apply Changes
-Reload Waybar to see the new theme:
+Quick Auto-Install
+Run this single command to backup your old config to waybarback and install Omarchy Radius automatically:
 
 Bash
 ```json
-killall waybar && waybar &
+mv ~/.config/waybar ~/.config/waybarback 2>/dev/null; git clone https://github.com/hembramnishant50-glitch/omarchy-radius-waybar.git ~/.config/waybar && killall waybar; waybar &
    ```
-Reboot Your Pc Ones
+[!IMPORTANT] Reboot your PC or restart your session after installation to ensure all changes take effect.
 
 <div align="center"> <br /> <sub>Built with ❤️ for the Linux Ricing community</sub> </div>
