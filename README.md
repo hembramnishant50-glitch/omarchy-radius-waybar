@@ -17,7 +17,7 @@
 
 ## ✨ Features
 * **Modular Island Design:** Clean separation between bar elements.
-* **Dynamic Battery:** Smart color shifting (Green when discharging, Orange when charging).
+* **Dynamic Battery:** Smart color shifting (**#16AB2A** discharging, **#F58E27** charging).
 * **Weather Integration:** Live temperature updates via `wttr.in`.
 * **Minimalist Aesthetic:** High transparency with subtle borders for a modern glass look.
 
