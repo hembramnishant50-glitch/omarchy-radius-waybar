@@ -36,7 +36,10 @@ Update your `config.jsonc` with the following block:
 
 
 
-🚀 Installation
+</div>
+---
+
+## 🚀 Installation
 1. Backup your current configuration
 Rename your existing waybar folder to waybarback to keep it as a backup:
 
