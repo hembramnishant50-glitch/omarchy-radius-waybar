@@ -36,8 +36,10 @@ Update your `config.jsonc` with the following block:
 
 
 
-</div>
----
+- Install
+```bash
+omarchy-theme-install https://github.com/hembramnishant50-glitch/omarchy-radius.git
+   ```
 
 ## 🚀 Installation
 1. Backup your current configuration
