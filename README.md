@@ -30,10 +30,6 @@ The weather module is highly customizable. Update your `config.jsonc` as follows
 
 ---
 
-* 1. Backup your current config
-
-
-
 
 "custom/weather": {
     "format": "󰖐 {}°C",
@@ -41,3 +37,20 @@ The weather module is highly customizable. Update your `config.jsonc` as follows
     "exec": "curl -s 'wttr.in/CITY_NAME?format=%t' | grep -oE '[0-9]+'",
     "on-click": "xdg-open '[https://www.google.com/search?q=weather+CITY_NAME](https://www.google.com/search?q=weather+CITY_NAME)'"
 }
+
+
+
+📍 Customizing Location
+* City Name: Replace CITY_NAME in the exec line. For cities with spaces, use a + (e.g., San+Francisco).
+
+* Data Cleanup: The grep command ensures only the numeric value is displayed.
+
+* Interaction: Click the icon to open a full Google Weather forecast for your city.
+
+🚀 Installation
+1. Backup your current config
+```json
+
+---
+
+mv ~/.config/waybar ~/.config/waybarback
