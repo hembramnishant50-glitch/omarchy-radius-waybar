@@ -27,6 +27,14 @@
 The weather module is highly customizable. Update your `config.jsonc` as follows:
 
 ```json
+
+---
+
+* 1. Backup your current config
+
+
+
+
 "custom/weather": {
     "format": "󰖐 {}°C",
     "interval": 3600,
