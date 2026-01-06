@@ -19,9 +19,29 @@ window#waybar { background: transparent; }
 }
 
 /* --- Workspaces --- */
-#workspaces { border: 2px solid #cdd6f4; padding: 0px 2px; }
-#workspaces button { padding: 0px 12px; color: @text; margin: 3px 1px; }
-#workspaces button.active { color: #232829; background: #f38ba8; border-radius: 10px; }
+#workspaces { 
+    border: 2px solid #cdd6f4; 
+    padding: 0px 2px; 
+}
+
+#workspaces button { 
+    padding: 0px 12px; 
+    color: @text; 
+    margin: 3px 1px; 
+}
+
+/* Hover Effect: Changes to Light Green when mouse is over 1, 2, 3, 4... */
+#workspaces button:hover {
+    color: #1e1e2e;          
+    background: #a6e3a1;     /* Light Green Hover */
+    border-radius: 10px;
+}
+
+#workspaces button.active { 
+    color: #232829; 
+    background: #f38ba8; 
+    border-radius: 10px; 
+}
 
 /* --- Colors & Borders --- */
 #clock { color: #89b4fa; border: 2px solid #89b4fa; }
@@ -34,20 +54,20 @@ window#waybar { background: transparent; }
 #pulseaudio { color: #89dceb; border: 2px solid #89dceb; }
 #custom-power, #custom-omarchy { color: #f38ba8; border: 2px solid #f38ba8; }
 
-/* --- Battery Personalization --- */
+/* --- Battery Personalization (Lighter Colors) --- */
 
-/* Not Charging: Color 16AB2A */
+/* Non-Charging: Light Mint Green */
 #battery { 
-    color: #16AB2A; 
-    border: 2px solid #16AB2A; 
+    color: #94e2d5; 
+    border: 2px solid #94e2d5; 
 }
 
-/* Charging: Color F58E27 & No Glow */
+/* Charging: Light Peach/Orange */
 #battery.charging, #battery.plugged { 
-    color: #F58E27; 
-    border: 2px solid #F58E27;
+    color: #f9e2af; 
+    border: 2px solid #f9e2af;
     background: alpha(@background, 0.6); 
-    animation: none; /* Disables any default Waybar flashing/glow */
+    animation: none; 
 }
 
 #battery.warning:not(.charging) {
