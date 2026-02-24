@@ -71,5 +71,5 @@
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
-    "custom/power": { "format": "󰐥", "on-click": "omarchy-menu power" }
+    "custom/power": { "format": "󰐥", "on-click": "omarchy-menu system" }
 }
